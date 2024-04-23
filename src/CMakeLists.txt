@@ -43,6 +43,6 @@ message(STATUS ${LIBRARY_OUTPUT_PATH_WIN})
 add_custom_command(TARGET ${target}
 POST_BUILD
 COMMAND xcopy ${CMAKE_SOURCE_DIR_WIN}\\include\\ ${CMAKE_SOURCE_DIR_WIN}\\..\\selfLearning\\libs\\wjutils\\include\\ /e /s /y
-COMMAND copy ${LIBRARY_OUTPUT_PATH_WIN}\\${CMAKE_BUILD_TYPE}\\${targetStaticLib} ${CMAKE_SOURCE_DIR_WIN}\\..\\selfLearning\\libs\\Debug\\wjutils\\${targetStaticLib}
-COMMAND copy ${LIBRARY_OUTPUT_PATH_WIN}\\${CMAKE_BUILD_TYPE}\\${targetDynamicLib} ${CMAKE_SOURCE_DIR_WIN}\\..\\selfLearning\\libs\\${CMAKE_BUILD_TYPE}\\wjutils\\${targetDynamicLib}
+COMMAND copy ${LIBRARY_OUTPUT_PATH_WIN}\\${CMAKE_BUILD_TYPE}\\${targetStaticLib} ${CMAKE_SOURCE_DIR_WIN}\\..\\selfLearning\\libs\\${CMAKE_BUILD_TYPE}\\${targetStaticLib}
+COMMAND copy ${LIBRARY_OUTPUT_PATH_WIN}\\${CMAKE_BUILD_TYPE}\\${targetDynamicLib} ${CMAKE_SOURCE_DIR_WIN}\\..\\selfLearning\\libs\\${CMAKE_BUILD_TYPE}\\${targetDynamicLib}
 )
